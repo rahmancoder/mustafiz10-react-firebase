@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Register = () => {
     return (
-        <div className="">
+        <div className="text-center">
             <div>
                 <h2>Register: Create Account</h2>
                 <form onSubmit="">
