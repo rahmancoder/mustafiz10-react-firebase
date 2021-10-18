@@ -20,7 +20,7 @@ import AuthProvider from './Context/AuthProvider';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <AuthProvider>
 
 
