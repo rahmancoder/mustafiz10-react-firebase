@@ -12,6 +12,8 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
 
 function App() {
   return (
@@ -27,7 +29,12 @@ function App() {
             <Home></Home>
 
           </Route>
-
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
 
 
 
