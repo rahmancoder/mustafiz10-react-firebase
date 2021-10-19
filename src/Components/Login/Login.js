@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from "firebase/auth";
 import initializeFirebaseAuthentication from '../../Firebase/Firebase.init';
+import useAuth from '../../Hooks/useAuth';
 
 initializeFirebaseAuthentication();
 
 const googleProvider = new GoogleAuthProvider();
 const Login = () => {
+    const { signInUsingGoogle,
+        loading,
+        handleResetPassword,
+        verifyEmail,
+        setUserName,
+        registerNewUser,
+        processLogin,
+        handleGoogleSignIn,
+        handleSignOut
+    } = useAuth();
 
     const [user, setUser] = useState({})
     const [name, setName] = useState('');
@@ -16,25 +27,25 @@ const Login = () => {
 
     const auth = getAuth();
 
-    const handleGoogleSignIn = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
+    // const handleGoogleSignIn = () => {
+    //     signInWithPopup(auth, googleProvider)
+    //         .then(result => {
+    //             const user = result.user;
+    //             console.log(user);
 
 
-                const { displayName, email, photoURL } = result.user;
-                const loggedInUser = {
-                    name: displayName,
-                    email: email,
-                    photo: photoURL
-                };
-                setUser(loggedInUser);
-            })
-            .catch(error => {
-                console.log(error.message);
-            })
-    }
+    //             const { displayName, email, photoURL } = result.user;
+    //             const loggedInUser = {
+    //                 name: displayName,
+    //                 email: email,
+    //                 photo: photoURL
+    //             };
+    //             setUser(loggedInUser);
+    //         })
+    //         .catch(error => {
+    //             console.log(error.message);
+    //         })
+    // }
 
     const toggleLogin = e => {
         setIsLogin(e.target.checked)
@@ -72,55 +83,55 @@ const Login = () => {
 
     }
 
-    const processLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                setError('');
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-    }
+    // const processLogin = (email, password) => {
+    //     signInWithEmailAndPassword(auth, email, password)
+    //         .then(result => {
+    //             const user = result.user;
+    //             console.log(user);
+    //             setError('');
+    //         })
+    //         .catch(error => {
+    //             setError(error.message);
+    //         })
+    // }
 
-    const registerNewUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                setError('');
-                verifyEmail();
-                setUserName();
-            })
-            .catch(error => {
-                setError(error.message);
-            })
-    }
+    // const registerNewUser = (email, password) => {
+    //     createUserWithEmailAndPassword(auth, email, password)
+    //         .then(result => {
+    //             const user = result.user;
+    //             console.log(user);
+    //             setError('');
+    //             verifyEmail();
+    //             setUserName();
+    //         })
+    //         .catch(error => {
+    //             setError(error.message);
+    //         })
+    // }
 
-    const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-            .then(result => { })
-    }
+    // const setUserName = () => {
+    //     updateProfile(auth.currentUser, { displayName: name })
+    //         .then(result => { })
+    // }
 
-    const verifyEmail = () => {
-        sendEmailVerification(auth.currentUser)
-            .then(result => {
-                console.log(result);
-            })
-    }
+    // const verifyEmail = () => {
+    //     sendEmailVerification(auth.currentUser)
+    //         .then(result => {
+    //             console.log(result);
+    //         })
+    // }
 
-    const handleResetPassword = () => {
-        sendPasswordResetEmail(auth, email)
-            .then(result => { })
-    }
+    // const handleResetPassword = () => {
+    //     sendPasswordResetEmail(auth, email)
+    //         .then(result => { })
+    // }
 
-    const handleSignOut = () => {
-        signOut(auth)
-            .then(() => {
-                setUser({});
-            })
-    }
+    // const handleSignOut = () => {
+    //     signOut(auth)
+    //         .then(() => {
+    //             setUser({});
+    //         })
+    // }
 
 
     return (

@@ -20,6 +20,7 @@ import AuthProvider from './Context/AuthProvider';
 import SingleDoctorInfo from './Components/SingleDoctorInfo/SingleDoctorInfo';
 import SingleServiceInfo from './Components/SingleServiceInfo/SingleServiceInfo';
 import FAQ from './Components/FAQ/FAQ';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -45,9 +46,12 @@ function App() {
             <Route path="/doctors">
               <Doctors></Doctors>
             </Route>
-            <Route path="/booking/:doctorId">
+            {/* <Route path="/booking/:doctorId">
               <SingleDoctorInfo></SingleDoctorInfo>
-            </Route>
+            </Route> */}
+            <PrivateRoute path="/booking/:doctorId">
+              <SingleDoctorInfo></SingleDoctorInfo>
+            </PrivateRoute>
 
             <Route path="/servicebooking/:serviceId">
               <SingleServiceInfo></SingleServiceInfo>
