@@ -18,6 +18,7 @@ import Doctors from './Components/Doctors/Doctors';
 import Services from './Components/Services/Services';
 import AuthProvider from './Context/AuthProvider';
 import SingleDoctorInfo from './Components/SingleDoctorInfo/SingleDoctorInfo';
+import Loginpagetwo from './Components/Login/Loginpagetwo';
 
 function App() {
   return (
@@ -48,6 +49,10 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+
+            <Route path="/logintwo">
+              <Loginpagetwo></Loginpagetwo>
             </Route>
             <Route path="/register">
               <Register></Register>
