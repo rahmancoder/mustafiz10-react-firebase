@@ -19,6 +19,7 @@ import Services from './Components/Services/Services';
 import AuthProvider from './Context/AuthProvider';
 import SingleDoctorInfo from './Components/SingleDoctorInfo/SingleDoctorInfo';
 import Loginpagetwo from './Components/Login/Loginpagetwo';
+import SingleServiceInfo from './Components/SingleServiceInfo/SingleServiceInfo';
 
 function App() {
   return (
@@ -47,6 +48,11 @@ function App() {
             <Route path="/booking/:doctorId">
               <SingleDoctorInfo></SingleDoctorInfo>
             </Route>
+
+            <Route path="/servicebooking/:serviceId">
+              <SingleServiceInfo></SingleServiceInfo>
+            </Route>
+
             <Route path="/login">
               <Login></Login>
             </Route>
