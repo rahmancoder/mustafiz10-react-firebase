@@ -134,11 +134,17 @@ const Login = () => {
     }
 
     useEffect(() => {
-        onAuthStateChanged(auth, user => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
+                // if user exists show
                 setUser(user);
             }
-        })
+            else {
+                // esle user is empty 
+                setUser({});
+            }
+        });
+        return () => unsubscribe;
     }, []);
 
 
