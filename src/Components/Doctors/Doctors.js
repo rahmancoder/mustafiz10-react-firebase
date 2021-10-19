@@ -13,10 +13,10 @@ const Doctors = () => {
     }, [])
 
     return (
-        <div className="text-center">
+        <div className="text-center text-info">
             <h1> Our Doctors</h1>
-            <p> Creat json doctors and fetch here and show their experience and photo with a button</p>
-
+            <h3>  Doctor of osteopathic medicine (D.O.) is a fully trained and licensed doctor who has attended and graduated from a U.S. osteopathic medical school. A doctor of medicine (M.D.) has attended and graduated from a conventional medical school.
+            </h3>
             <div className="row m-3">
 
                 {

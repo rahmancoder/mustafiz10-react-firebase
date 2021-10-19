@@ -21,6 +21,7 @@ import SingleDoctorInfo from './Components/SingleDoctorInfo/SingleDoctorInfo';
 import SingleServiceInfo from './Components/SingleServiceInfo/SingleServiceInfo';
 import FAQ from './Components/FAQ/FAQ';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import DoctorPrivate from './Components/DoctorPrivate/DoctorPrivate';
 
 function App() {
   return (
@@ -53,9 +54,17 @@ function App() {
               <SingleDoctorInfo></SingleDoctorInfo>
             </PrivateRoute> */}
 
+            {/* <Route path="/servicebooking/:serviceId">
+              <SingleServiceInfo></SingleServiceInfo>
+            </Route> */}
+
             <Route path="/servicebooking/:serviceId">
               <SingleServiceInfo></SingleServiceInfo>
             </Route>
+
+            <PrivateRoute path="/private">
+              <DoctorPrivate></DoctorPrivate>
+            </PrivateRoute>
 
             <Route path="/login">
               <Login></Login>

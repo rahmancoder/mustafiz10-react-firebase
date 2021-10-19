@@ -14,6 +14,7 @@ const Header = () => {
                         <Button className="bg-warning"><Link className="m-2 text-decoration-none" to="/home">Home</Link> </Button>
                         <Link className="m-2 text-decoration-none text-light" to="/services">Services</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/doctors">Doctor</Link>
+                        <Link className="m-2 text-decoration-none text-light" to="/private">PrivateDoctor</Link>
                         {/* <Link className="m-2 text-decoration-none text-light" to="/login">LogIn</Link> */}
                         {/* <Link className="m-2 text-decoration-none text-light" to="/register">Register</Link> */}
                         {user?.email ? (
@@ -29,6 +30,13 @@ const Header = () => {
                                 Login
                             </Link>
                         )}
+                        {
+                            user?.email && <Link className="m-2 text-decoration-none text-light" to="/">
+                                <li className="header-items">
+                                    {user.displayName}
+                                </li>
+                            </Link>
+                        }
                         <Link className="m-2 text-decoration-none text-light" to="/questions">FAQ</Link>
                         {/* <Link className="m-2" to="/notfound">Not Found</Link> */}
                     </Nav>

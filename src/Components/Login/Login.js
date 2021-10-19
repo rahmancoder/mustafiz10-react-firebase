@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from "firebase/auth";
 import initializeFirebaseAuthentication from '../../Firebase/Firebase.init';
+// import useFirebase from '../../Hooks/useFirebase';
 // import useAuth from '../../Hooks/useAuth';
 
 initializeFirebaseAuthentication();
@@ -8,7 +9,6 @@ initializeFirebaseAuthentication();
 const googleProvider = new GoogleAuthProvider();
 const Login = () => {
     // const { signInUsingGoogle,
-    //     loading,
     //     handleResetPassword,
     //     verifyEmail,
     //     setUserName,
@@ -16,7 +16,7 @@ const Login = () => {
     //     processLogin,
     //     handleGoogleSignIn,
     //     handleSignOut
-    // } = useAuth();
+    // } = useFirebase();
 
     const [user, setUser] = useState({})
     const [name, setName] = useState('');
@@ -151,7 +151,7 @@ const Login = () => {
 
     return (
         <div className="mx-5">
-            {!user.name ?
+            {!user.email ?
                 <form onSubmit={handleRegistration}>
                     <h3 className="text-success">Please {isLogin ? 'Login' : 'Register'}</h3>
                     {!isLogin && <div className="row mb-3">
@@ -190,18 +190,18 @@ const Login = () => {
 
                 </form>
                 :
-                user.name && <div>
+                user.email && <div>
                     <h2>Welcome {user.name}</h2>
-                    <p>I know your email address: {user.email}</p>
+                    <p>Your Login Email is: {user.email}</p>
                     <img src={user.photo} alt="" />
                 </div>
 
             }
             <br /><br /><br />
-            <div>--------------------------------</div>
+            <div>______________USER DASHBOARD______________</div>
             <br /><br /><br />
             {/* <button onClick={handleGoogleSignIn}>Google Sign In</button> */}
-            {!user.name ?
+            {!user.email ?
                 <div>
                     <button onClick={handleGoogleSignIn}>Google Sign In</button>
                     {/* <button onClick={handleGithubSignIn}>Github Sign In</button> */}
@@ -213,9 +213,9 @@ const Login = () => {
 
 
             {
-                user.name && <div>
+                user.email && <div>
                     <h2>Welcome {user.name}</h2>
-                    <p>I know your email address: {user.email}</p>
+                    <p>Your Login Email is: {user.email}</p>
                     <img src={user.photo} alt="" />
                 </div>
             }

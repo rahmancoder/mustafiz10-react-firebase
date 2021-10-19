@@ -14,15 +14,9 @@ const Services = () => {
 
     return (
         <div className="text-center">
-            <h1> Diagonosis </h1>
-            <h1> Therapy </h1>
-            <h1> LAB Test </h1>
-            <h1> Emergency </h1>
-            <h1> Online Doctors </h1>
-            <h1> Medicine  </h1>
-            <h1> Vaccine Information  </h1>
+
             <div className="text-center">
-                <h1> Our Services</h1>
+                <h1 className="text-danger"> Our Services</h1>
                 <p>Get a Services from Us Now?</p>
 
                 <div className="row m-3">
