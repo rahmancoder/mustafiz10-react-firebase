@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# HealthCare Online & Support (Website-Name)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Code LinK:https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-rahmancoder
 
-In the project directory, you can run:
+## Live site LinK:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Description About this Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Used-
+* React Routing Used (React-router-dom)
+* Dynamic Routing Added
+* Private Route ( Redirect to Login Page)
+* React Bootstrap Used (React bootstrap)
+* Firebase Used (for Authentication)
+* Firebase SingIN And Register Added 
+* Email Password added with Authentication
+* Google Sign IN Added
+* Icon Used from Font Awesome ( basic icons)
+* Images added from freepik (freepik and Unplash)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## About Application
 
-### `npm run build`
+* / ==  (root,home)
+* /home
+* /services
+* /doctors
+* /login
+* /questions
+* /services/:serviceId
+* /doctors/:doctorId
+* /*  Not Found
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### All Total Comoponents Here- (17 Component)
+1.BannerBackground
+2.DoctorPrivate
+3.Doctors
+4.FAQ
+5.Footer
+6.Header
+7.Home
+8.Login
+9.NotFound
+10.PrivateRoute
+11.Register ( used toggle)
+12.Services
+13.SingleServices
+14.SingleServicesinfo
+15.SingleDoctor
+16.SingleServiceDetails
+17.15.SingleDoctorinfo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Two CUSTOM JSON FIle Added
+1.Allservices.json
+2.doctors.json
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## ABout HealthCare Website Description-
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Dedicated Doctors and Services Provided Like:
+1. Cardiologist
+2. Medicine
+3. Diabetes
+4. Nursing Care etc
+5. Specialized Doctors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
