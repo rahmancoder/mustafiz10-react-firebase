@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Navbar, Button, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../Hooks/useFirebase';
 
 const Header = () => {
+    const { logOut, user } = useFirebase();
     return (
         <>
             <Navbar sticky="top" bg="warning" variant="dark">
@@ -14,6 +16,15 @@ const Header = () => {
                         <Link className="m-2 text-decoration-none text-light" to="/doctors">Doctor</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/login">LogIn</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/register">Register</Link>
+                        {user?.email ? (
+                            <li onClick={logOut} className="header-items">
+                                Logout
+                            </li>
+                        ) : (
+                            <Link to="/logintwo" className="header-items">
+                                Logintwo
+                            </Link>
+                        )}
                         <Link className="m-2 text-decoration-none text-light" to="/questions">FAQ</Link>
                         {/* <Link className="m-2" to="/notfound">Not Found</Link> */}
                     </Nav>
