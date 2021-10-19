@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from "firebase/auth";
+import React, { useEffect, useState } from 'react';
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile, signOut } from "firebase/auth";
 import initializeFirebaseAuthentication from '../../Firebase/Firebase.init';
-import useAuth from '../../Hooks/useAuth';
+// import useAuth from '../../Hooks/useAuth';
 
 initializeFirebaseAuthentication();
 
@@ -132,6 +132,15 @@ const Login = () => {
                 setUser({});
             })
     }
+
+    useEffect(() => {
+        onAuthStateChanged(auth, user => {
+            if (user) {
+                setUser(user);
+            }
+        })
+    }, []);
+
 
 
     return (
