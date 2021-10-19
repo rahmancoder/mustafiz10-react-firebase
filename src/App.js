@@ -46,12 +46,12 @@ function App() {
             <Route path="/doctors">
               <Doctors></Doctors>
             </Route>
-            {/* <Route path="/booking/:doctorId">
+            <Route path="/booking/:doctorId">
               <SingleDoctorInfo></SingleDoctorInfo>
-            </Route> */}
-            <PrivateRoute path="/booking/:doctorId">
+            </Route>
+            {/* <PrivateRoute path="/booking/:doctorId">
               <SingleDoctorInfo></SingleDoctorInfo>
-            </PrivateRoute>
+            </PrivateRoute> */}
 
             <Route path="/servicebooking/:serviceId">
               <SingleServiceInfo></SingleServiceInfo>
