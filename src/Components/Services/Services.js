@@ -22,8 +22,8 @@ const Services = () => {
             <h1> Medicine  </h1>
             <h1> Vaccine Information  </h1>
             <div className="text-center">
-                <h1> Our Doctors</h1>
-                <p> Creat json doctors and fetch here and show their experience and photo with a button</p>
+                <h1> Our Services</h1>
+                <p>Get a Services from Us Now?</p>
 
                 <div className="row m-3">
 

@@ -14,15 +14,19 @@ const Header = () => {
                         <Button className="bg-warning"><Link className="m-2 text-decoration-none" to="/home">Home</Link> </Button>
                         <Link className="m-2 text-decoration-none text-light" to="/services">Services</Link>
                         <Link className="m-2 text-decoration-none text-light" to="/doctors">Doctor</Link>
-                        <Link className="m-2 text-decoration-none text-light" to="/login">LogIn</Link>
-                        <Link className="m-2 text-decoration-none text-light" to="/register">Register</Link>
+                        {/* <Link className="m-2 text-decoration-none text-light" to="/login">LogIn</Link> */}
+                        {/* <Link className="m-2 text-decoration-none text-light" to="/register">Register</Link> */}
                         {user?.email ? (
-                            <li onClick={logOut} className="header-items">
-                                Logout
-                            </li>
+
+                            <Link className="m-2 text-decoration-none text-light" to="/services">
+                                <li onClick={logOut} className="header-items">
+                                    Logout
+                                </li>
+                            </Link>
+
                         ) : (
-                            <Link to="/logintwo" className="header-items">
-                                Logintwo
+                            <Link to="/login" className="header-items m-2 text-decoration-none text-light">
+                                Login
                             </Link>
                         )}
                         <Link className="m-2 text-decoration-none text-light" to="/questions">FAQ</Link>

@@ -18,8 +18,8 @@ import Doctors from './Components/Doctors/Doctors';
 import Services from './Components/Services/Services';
 import AuthProvider from './Context/AuthProvider';
 import SingleDoctorInfo from './Components/SingleDoctorInfo/SingleDoctorInfo';
-import Loginpagetwo from './Components/Login/Loginpagetwo';
 import SingleServiceInfo from './Components/SingleServiceInfo/SingleServiceInfo';
+import FAQ from './Components/FAQ/FAQ';
 
 function App() {
   return (
@@ -57,11 +57,15 @@ function App() {
               <Login></Login>
             </Route>
 
-            <Route path="/logintwo">
-              <Loginpagetwo></Loginpagetwo>
-            </Route>
+
             <Route path="/register">
               <Register></Register>
+            </Route>
+
+
+            <Route path="/questions">
+              <FAQ></FAQ>
+
             </Route>
 
 

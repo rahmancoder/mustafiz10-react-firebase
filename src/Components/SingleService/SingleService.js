@@ -16,7 +16,7 @@ const SingleService = (props) => {
 
                         {/* <span className="text-info"> About Doctor:-</span> : {about} */}
                     </Card.Text>
-                    <Card.Title><span className="text-danger font-weight-bold"> Speciality-</span> {doctor_reffered}</Card.Title>
+                    <Card.Title><span className="text-danger font-weight-bold"> Specialist-</span> {doctor_reffered}</Card.Title>
                     <Link to={`/servicebooking/${index}`}>
                         <Button variant="info">Add this Service</Button>
                     </Link>
