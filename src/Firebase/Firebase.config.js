@@ -1,11 +1,14 @@
 
 const firebaseConfig = {
-    apiKey: "AIzaSyATOx7dckOfekQqTT9lZ17tr8BInvWbhH4",
-    authDomain: "mustafiz-healthcare-firebase.firebaseapp.com",
-    projectId: "mustafiz-healthcare-firebase",
-    storageBucket: "mustafiz-healthcare-firebase.appspot.com",
-    messagingSenderId: "631435667075",
-    appId: "1:631435667075:web:d112b4e37f988376cd5db6"
+    
+     apiKey: process.env.REACT_APP_API_KEY,
+     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+     projectId: process.env.REACT_APP_PROJECT_ID,
+     storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+     appId: process.env.REACT_APP_APP_ID,
+    
+
 };
 
 export default firebaseConfig;
